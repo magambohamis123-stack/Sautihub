@@ -1,0 +1,12 @@
+name = "sautihub"
+main = "worker.js"
+compatibility_date = "2026-11-27"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sautihub_db"
+database_id = "WEKA_D1_DATABASE_ID_HAPA"
+
+[[r2_buckets]]
+binding = "AUDIO"
+bucket_name = "sautihub-audio"
