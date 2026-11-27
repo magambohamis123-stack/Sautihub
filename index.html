@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10131d">
+<meta name="description" content="SAUTI HUB - Sikiliza na pakua tamthilia za sauti.">
+<title>SAUTI HUB | Sauti Zenye Maisha</title>
+<style>
+:root{--bg:#10131d;--panel:#1c2433;--gold:#ffb52e;--muted:#b4bfd0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#fff;font-family:Arial,sans-serif}
+header{background:#1b2130;padding:17px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;position:sticky;top:0;z-index:5}
+.logo{font-size:25px;font-weight:bold;color:var(--gold)}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{padding:75px 7%;background:linear-gradient(120deg,#283651,#11131d)}
+.hero h1{font-size:clamp(30px,6vw,48px);margin:0 0 15px}
+.hero p{max-width:570px;color:#d0d5df;line-height:1.8}
+.btn{background:var(--gold);color:#171717;border:0;padding:13px 20px;border-radius:8px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+main{padding:25px 6%;max-width:1250px;margin:auto}
+h2{margin:35px 0 18px}
+input,textarea,select{width:100%;padding:14px;margin:8px 0;border-radius:8px;border:1px solid #414b60;background:#202838;color:white;font-size:15px}
+textarea{min-height:100px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card,.panel{background:var(--panel);padding:17px;border-radius:13px}
+.cover{height:150px;width:100%;object-fit:cover;background:linear-gradient(135deg,#78421d,#e9a32c);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:40px}
+.card p{color:var(--muted);font-size:14px;line-height:1.6}
+audio{width:100%;margin:12px 0}
+.muted{color:var(--muted)}
+.hidden{display:none}
+footer{text-align:center;background:#1b2130;padding:30px;color:#aeb8c9;margin-top:40px}
+.tag{color:var(--gold);font-size:12px}
+.status{color:var(--gold);padding:8px 0}
+@media(max-width:600px){header{padding:15px 5%}.hero{padding:55px 6%}main{padding:18px 5%}nav{gap:12px}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">🎧 SAUTI HUB</div>
+ <nav>
+  <a href="#home">Nyumbani</a>
+  <a href="#shows">Tamthilia</a>
+  <a href="#categories">Makundi</a>
+  <a href="#producer">Wazalishaji</a>
+ </nav>
+</header>
+
+<section class="hero" id="home">
+ <div class="tag">KARIBU KWENYE ULIMWENGU WA SAUTI</div>
+ <h1>Sauti Zenye Maisha!</h1>
+ <p>Sikiliza tamthilia, hadithi na vipindi vya sauti vinavyokuburudisha, kukuelimisha na kukupa uzoefu mpya.</p>
+ <a href="#shows" class="btn">🎧 Anza Kusikiliza</a>
+</section>
+
+<main>
+ <section id="shows">
+  <h2>🔥 Tamthilia Mpya</h2>
+  <input id="search" type="search" placeholder="Tafuta jina la tamthilia..." oninput="filterShows()">
+  <div class="grid" id="showList">
+   <article class="card" data-title="Kivuli cha Usaliti" data-category="Tamthilia">
+    <div class="cover">🎭</div>
+    <span class="tag">TAMTHILIA</span>
+    <h3>Kivuli cha Usaliti</h3>
+    <p>Hadithi ya siri, mapenzi na usaliti inayofichua ukweli uliojificha.</p>
+    <p class="muted">Sauti itaonekana baada ya kupakiwa.</p>
+   </article>
+  </div>
+  <p id="empty" class="muted hidden">Hakuna matokeo yaliyopatikana.</p>
+ </section>
+
+ <section id="categories">
+  <h2>📚 Makundi ya Sauti</h2>
+  <div class="grid">
+   <div class="card"><h3>🎭 Tamthilia</h3><p>Hadithi zenye wahusika na matukio.</p></div>
+   <div class="card"><h3>📖 Hadithi</h3><p>Hadithi za kusisimua na kujifunza.</p></div>
+   <div class="card"><h3>🎙️ Mahojiano</h3><p>Mazungumzo na watu mbalimbali.</p></div>
+   <div class="card"><h3>🎓 Elimu</h3><p>Vipindi vya maarifa na elimu.</p></div>
+  </div>
+ </section>
+
+ <section class="panel" id="producer">
+  <h2>🎤 Kwa Wazalishaji wa Sauti</h2>
+  <p class="muted">SAUTI HUB inawapa wazalishaji nafasi ya kushiriki kazi zao na kufikia wasikilizaji wengi.</p>
+  <p>Hivi karibuni utaweza kufungua akaunti, kupakia tamthilia, kuweka picha na kusimamia kazi zako kupitia akaunti yako.</p>
+  <p class="status">Mfumo wa akaunti na upakiaji utaunganishwa na seva katika hatua inayofuata.</p>
+ </section>
+
+ <section class="panel">
+  <h2>📻 SAUTI HUB LIVE</h2>
+  <p class="muted">Sehemu ya matangazo ya moja kwa moja ya redio yetu.</p>
+  <p class="status">Huduma ya matangazo ya moja kwa moja itaunganishwa baada ya maandalizi ya streaming.</p>
+ </section>
+</main>
+
+<footer>
+ <div class="logo">🎧 SAUTI HUB</div>
+ <p>Sauti Zenye Maisha.</p>
+ <p>© 2026 SAUTI HUB. Haki zote zimehifadhiwa.</p>
+</footer>
+
+<script>
+function filterShows(){
+ const query=document.getElementById("search").value.toLowerCase();
+ const cards=document.querySelectorAll("#showList .card");
+ let visible=0;
+ cards.forEach(card=>{
+  const title=(card.dataset.title||"").toLowerCase();
+  const category=(card.dataset.category||"").toLowerCase();
+  const match=title.includes(query)||category.includes(query);
+  card.style.display=match?"block":"none";
+  if(match)visible++;
+ });
+ document.getElementById("empty").classList.toggle("hidden",visible>0);
+}
+</script>
+
+</body>
+</html>
